@@ -1,0 +1,26 @@
+@use "../../scss/" as *;
+
+.genres {
+  @include flex(center, center);
+  gap: 2rem;
+
+  .item {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    opacity: 0.7;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+      opacity: 1;
+    }
+  }
+
+  .active {
+    background-color: $primary-color;
+    opacity: 1;
+  }
+}
